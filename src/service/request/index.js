@@ -1,5 +1,4 @@
 import axios from "axios"
-import { config } from "webpack"
 import { BASE_URL, TIMEOUT } from "./config"
 
 class DcRequest {

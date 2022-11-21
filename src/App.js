@@ -2,13 +2,17 @@ import React, { memo } from "react"
 import { useRoutes } from "react-router-dom"
 
 import routes from "@/router"
+import AppHeader from "./components/app-header"
+import AppFooter from "./components/app-footer"
 
 const App = memo(() => {
 	return (
 		<div className="app">
-			<div className="header">header</div>
+			{/* 网页头部 */}
+			<AppHeader />
 			<div className="main">{useRoutes(routes)}</div>
-			<div className="footer">footer</div>
+			{/* 网页底部 */}
+			<AppFooter />
 		</div>
 	)
 })

@@ -1,25 +1,41 @@
 import React, { memo, useEffect } from "react"
-
 import { connect } from "react-redux"
-import { changeBanners } from "@/store/module/Home.js"
-const Home = memo(props => {
-	const { changeBanner } = props
-	useEffect(() => {
-		changeBanner([{ name: "凤凰大酒店" }])
-	})
+import Button from "@mui/material/Button"
 
-	return <div>Home</div>
+import HomeBanner from "./c-cpns/home-banner"
+import { HomeWrapper } from "./style"
+import { fetchHomeData } from "@/store/modules/home.js"
+import HomeList from "./c-cpns/home-list"
+const Home = memo(props => {
+	const { changeGoodPriceData, goodPrice } = props
+
+	useEffect(() => {
+		changeGoodPriceData()
+	}, [changeGoodPriceData])
+
+	return (
+		<HomeWrapper>
+			{/* 首页轮播 */}
+			<HomeBanner />
+			{/* 首页数据 */}
+			<div className="main">
+				{/* 高性价比房源 */}
+				<HomeList data={goodPrice} />
+			</div>
+			<Button variant="contained">Link</Button>
+		</HomeWrapper>
+	)
 })
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		homeBanners: state.home.homeBanners,
+		goodPrice: state.home.goodPrice,
 	}
 }
 
 const mapDispatchToProps = dispatch => ({
-	changeBanner(payload) {
-		dispatch(changeBanners(payload))
+	changeGoodPriceData(payload) {
+		dispatch(fetchHomeData())
 	},
 })
 
