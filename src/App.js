@@ -10,7 +10,12 @@ const App = memo(() => {
 		<div className="app">
 			{/* 网页头部 */}
 			<AppHeader />
-			<div className="main">{useRoutes(routes)}</div>
+			<div
+				className="main"
+				style={{ borderBottom: "1px solid #eee", paddingBottom: "50px" }}
+			>
+				{useRoutes(routes)}
+			</div>
 			{/* 网页底部 */}
 			<AppFooter />
 		</div>

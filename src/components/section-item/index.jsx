@@ -4,8 +4,7 @@ import { Rating } from "@mui/material"
 import { SectionItemWrapper } from "./style"
 
 const SectionItem = memo(props => {
-	const { item, width } = props
-	console.log(item)
+	const { item, width = "25%" } = props
 	return (
 		<SectionItemWrapper
 			color={{

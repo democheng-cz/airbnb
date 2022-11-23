@@ -1,8 +1,8 @@
-# 1. 使用craco配置
+# 1. 使用 craco 配置
 
 ### 1. 配置别名
 
-##### 1. 安装craco
+##### 1. 安装 craco
 
 ```
 npm i craco/croca@alpha -D( 使用与create-script 5以上 )
@@ -12,7 +12,7 @@ npm i craco/croca@alpha -D( 使用与create-script 5以上 )
 
 ```
 module.exports = {
-	
+
 	// webpack
 	webpack: {
 		alias: {
@@ -23,9 +23,9 @@ module.exports = {
 }
 ```
 
-### 2. 配置less
+### 2. 配置 less
 
-##### 1. 安装craco-less
+##### 1. 安装 craco-less
 
 ```
 npm i craco-less@2.1.0-alpha.0
@@ -51,15 +51,18 @@ module.exports = {
 			},
 		},
 	],
-	
+
 }
 ```
 
 ### 3. 清除默认样式
 
-##### 1. 安装normalize.css
+##### 1. 安装 normalize.css
 
 ```
 npm i normalize.css
 ```
 
+# 2. hooks
+
+### 1. useState的初始化值, 只在组件第一次渲染时有效

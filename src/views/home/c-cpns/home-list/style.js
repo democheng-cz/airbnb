@@ -5,9 +5,10 @@ export const HomeListWrapper = styled.div`
 		margin: 0 -8px;
 		display: flex;
 		flex-wrap: wrap;
-	}
-	.more {
-		color: ${props => props.theme.text.primaryColor};
-		font-weight: 600;
+		.loading {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 `
