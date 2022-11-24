@@ -9,6 +9,8 @@ import store from "@/store"
 import { theme } from "@/assets/theme/theme"
 import "normalize.css"
 import "@/assets/css/index.less"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
 	// <React.StrictMode>

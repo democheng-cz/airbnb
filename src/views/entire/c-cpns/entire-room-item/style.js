@@ -5,8 +5,8 @@ export const SectionItemWrapper = styled.div`
 	width: ${props => props.width};
 	padding: 0 8px;
 	margin: 5px 0;
-	display: flex;
-	flex-direction: column;
+	/* display: flex; */
+	/* flex-direction: column; */
 	position: relative;
 	.cover {
 		/* width: 100%; */
@@ -14,7 +14,7 @@ export const SectionItemWrapper = styled.div`
 		position: relative;
 		top: 0;
 		left: 0;
-		cursor: pointer;
+		/* cursor: pointer; */
 		img {
 			width: 100%;
 			height: 100%;
@@ -23,8 +23,11 @@ export const SectionItemWrapper = styled.div`
 			left: 0;
 		}
 	}
-	span {
-		display: inline-block;
+	.slider {
+		width: 100%;
+	}
+	.item {
+		display: inline-block !important;
 		margin: 5px 0;
 		cursor: pointer;
 	}
@@ -51,6 +54,36 @@ export const SectionItemWrapper = styled.div`
 			color: ${props => props.color.rankingColor};
 			font-size: 12px;
 			margin: 0 !important;
+		}
+	}
+
+	.btn {
+		color: #fff;
+		position: absolute;
+		top: 0;
+		width: 20%;
+		background-image: linear-gradient(
+			-90deg,
+			rgba(0, 0, 0, 0) 10%,
+			rgb(0, 0, 0, 0.25) 100%
+		);
+		height: 64.5%;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.right {
+		right: 2%;
+		background-image: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 0) 10%,
+			rgb(0, 0, 0, 0.25) 100%
+		);
+	}
+	&:hover {
+		.btn {
+			display: flex;
 		}
 	}
 `
